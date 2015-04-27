@@ -3,19 +3,26 @@
  */
 public class Problem3 {
 
-    public static void main(String[] args) {
-        int a =0;
-        for (int i = 1; i < 600851475143; i++) {
-            if (600851475143%i==0 && isPrimeNumber(i)){
-                a=i;
+    public static void main(String[] args)
+    {
+
+        long num = 600851475143L;
+        long prime = 2;
+        while (true)
+        {
+            long tmp = 600851475143L / prime;
+            if ( num % tmp == 0 &&  isPrimeNumber(tmp) )
+            {
+                System.out.println(tmp);
+                break;
             }
+            prime++;
         }
-        System.out.println(a);
     }
 
-    public static boolean isPrimeNumber(int number){
+    public static boolean isPrimeNumber(long number){
 
-        for(int i=2; i<=number/2; i++){
+        for(long i=2; i<=number/2; i++){
             if(number % i == 0){
                 return false;
             }
