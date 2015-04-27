@@ -5,8 +5,8 @@ public class Problem3 {
 
     public static void main(String[] args) {
         int a =0;
-        for (int i = 1; i < 600851475143; i++) {
-            if (600851475143%i==0 && isPrimeNumber(i)){
+        for (int i = 1; i < 5143; i++) {
+            if (5143%i==0 && isPrimeNumber(i)){
                 a=i;
             }
         }
