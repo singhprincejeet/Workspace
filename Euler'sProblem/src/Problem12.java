@@ -10,9 +10,9 @@ public class Problem12 {
             int count=2;
             for(int i=2;i<=Math.sqrt(triangle) && check;i++){
                 if((triangle%i)==0) {
-                    count+=2;
+                    count++;
                 }
-                if(count>=500){
+                if(count>=250){
                     check=false;
                 }
             }
