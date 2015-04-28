@@ -15,14 +15,15 @@ public class Problem7 {
         System.out.println(result);
     }
 
-    private static boolean isPrime(int number){
-
-        for(int i=2; i<=number/2; i++){
-            if(number % i == 0){
-                return false;
-            }
+    private static boolean isPrime(long n)
+    {
+        boolean check = true;
+        int condition = (int)Math.sqrt(n);
+        for (int i=2; i<=  condition && check; i++)
+        {
+            check = !(n % i == 0);
         }
-        return true;
+        return check;
     }
 }
 
