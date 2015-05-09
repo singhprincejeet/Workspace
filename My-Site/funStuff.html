@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"><link href="css/Style.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Overlock" rel='stylesheet' type='text/css'>
+    <title>Fun Stuff</title>
+</head>
+<body>
+<section>
+    <img id="slideImg" src="img/pic1.jpg" alt="slide image">
+    <p style="text-align: center">
+        <input class="button" type="button" value="Previous" onclick="imgSlideBack()"/>
+        <input class="button" type="button" value="Next" onclick="imgSlide()"/>
+    </p>
+</section>
+<script>
+
+    function imgSlide() {
+        var image = document.getElementById('slideImg');
+        if (image.src.match("pic1")) {
+            image.src = "img/pic2.jpg"
+        } else if (image.src.match("pic2")) {
+            image.src = "img/pic3.jpg"
+        } else if (image.src.match("pic3")) {
+            image.src = "img/pic4.jpg"
+        } else if (image.src.match("pic4")) {
+            image.src = "img/pic5.jpg"
+        } else if (image.src.match("pic5")) {
+            image.src = "img/pic1.jpg"
+        }
+    }
+    function imgSlideBack() {
+        var image = document.getElementById('slideImg');
+        if (image.src.match("pic1")) {
+            image.src = "img/pic5.jpg"
+        } else if (image.src.match("pic2")) {
+            image.src = "img/pic1.jpg"
+        } else if (image.src.match("pic3")) {
+            image.src = "img/pic2.jpg"
+        } else if (image.src.match("pic4")) {
+            image.src = "img/pic3.jpg"
+        } else if (image.src.match("pic5")) {
+            image.src = "img/pic4.jpg"
+        }
+    }
+</script>
+</body>
+</html>
