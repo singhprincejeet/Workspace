@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #2C3539;
+}
+
+#wrapper{
+    background-color: #ffffff;
+    margin: 45px auto;
+    padding: 10px;
+    width: 70%;
+    min-height: 83vh;
+}
+
+header{
+    background-color: #ffffff;
+}
+
+header h1{
+    font-family: 'Tangerine', serif;
+    font-size: 15vh;
+    padding-top: 5px;
+    text-align: center;
+    margin: 20px auto;
+    color: #2C3539;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+header h2 {
+    font-family: 'Overlock', cursive;
+    padding-top: 5px;
+    text-align: center;
+    margin: 10px 10px;
+    color: #2C3539;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+nav{
+    margin: 10px 80px;
+    border-top: 1px solid #B6B6B4;
+    border-bottom: 1px solid #B6B6B4;
+}
+
+nav a{
+    padding: 0px 10px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #25383C;
+}
+
+#bulbImage{
+    display: block;
+    margin: 0px auto;
+}
+
+figcaption{
+    text-align: center;
+    font-weight: 800;
+}
+
+#slideImg{
+    display: block;
+    margin: auto;
+    width: 50vw;
+    height: 20vw;
+    padding: 10px;
+}
+
+.button{
+    display: inline-block;
+    width: 80px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #2C3539;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.buttonGroup{
+    display: block;
+    margin: 0 auto;
+}
