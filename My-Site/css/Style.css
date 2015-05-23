@@ -9,7 +9,7 @@ body{
 
 #wrapper{
     background-color: #ffffff;
-    margin: 45px auto;
+    margin: 6.9vh auto;
     padding: 10px;
     width: 70%;
     min-height: 83vh;
@@ -21,7 +21,7 @@ header{
 
 header h1{
     font-family: 'Tangerine', serif;
-    font-size: 15vh;
+    font-size: 120px;
     padding-top: 5px;
     text-align: center;
     margin: 20px auto;
@@ -30,7 +30,8 @@ header h1{
 }
 
 header h2 {
-    font-family: 'Overlock', cursive;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 28px;
     padding-top: 5px;
     text-align: center;
     margin: 10px 10px;
@@ -39,21 +40,26 @@ header h2 {
 }
 
 nav{
-    margin: 10px 80px;
+    margin: 1vh 6vw;
     border-top: 1px solid #B6B6B4;
     border-bottom: 1px solid #B6B6B4;
 }
 
 nav a{
     padding: 0px 10px;
-    font-size: 24px;
+    font-size: 26px;
     text-decoration: none;
     color: #25383C;
+}
+
+nav a:hover{
+    color: #9E9E9E;
 }
 
 #bulbImage{
     display: block;
     margin: 0px auto;
+    height: 35vh;
 }
 
 figcaption{
@@ -71,7 +77,7 @@ figcaption{
 
 .button{
     display: inline-block;
-    width: 80px;
+    width: 87px;
     margin: 0 auto;
     padding: 5px;
     color: #ffffff;
@@ -84,4 +90,29 @@ figcaption{
 .buttonGroup{
     display: block;
     margin: 0 auto;
+}
+section{
+    margin: 2vh 7vw;
+    font-family: 'Maven Pro', sans-serif;
+    color: #2C3539;
+}
+
+section h3{
+    margin: 10px auto;
+}
+
+.container{
+    margin: 0px 2.8vw;
+}
+
+.container input{
+    margin: 0.5vw auto;
+}
+
+p{
+    color: #2C3539;
+}
+
+#car{
+    display: block;
 }
