@@ -1,48 +1,234 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8"><link href="css/Style.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <link href="css/Style.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Tangerine" rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Overlock" rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
     <title>Fun Stuff</title>
 </head>
 <body>
-<section>
-    <img id="slideImg" src="img/pic1.jpg" alt="slide image">
-    <p style="text-align: center">
-        <input class="button" type="button" value="Previous" onclick="imgSlideBack()"/>
-        <input class="button" type="button" value="Next" onclick="imgSlide()"/>
-    </p>
-</section>
+<div id="wrapper">
+    <header>
+        <h1>Princejeet Singh Sandhu</h1>
+        <h2>Dream - Hard Work - Reality </h2>
+        <p id="greetings" style="text-align: right; margin-right: 7vw; font-weight: 700; font-family: 'Maven Pro', sans-serif"></p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Blog</a>
+        <a href="funStuff.html">Fun Stuff</a>
+        <a href="#">About</a>
+    </nav>
+    <section>
+        <h3>Slideshow</h3>
+        <img id="slideImg" src="img/pic4.jpg" alt="slide image">
+        <p style="text-align: center">
+            <input class="button" type="button" value="Previous" onclick="imgSlideBack()"/>
+            <input class="button" type="button" value="Next" onclick="imgSlide()"/>
+        </p>
+    </section>
+    <section>
+        <h3>Number Conversions</h3>
+        <div class="container">
+            <input type="text" placeholder="Enter the Number" id="number">
+            <p><span style="font-weight: 700">Result </span><span id="result"></span></p>
+            <input class="button" type="submit" value="Hexadecimal" onclick="hexadecimal()"/>
+            <input class="button" type="submit" value="Binary" onclick="binary()"/>
+            <input class="button" type="submit" value="Octadecimal" onclick="octadecimal()"/>
+        </div>
+    </section>
+    <section>
+        <h3>Zodiac</h3>
+        <div class="container">
+            <input type="text" placeholder="Month(mm)" id="month">
+            <input type="text" placeholder="Date(dd)" id="date">
+            <input class="button" type="submit" value="Result" onclick="zodiac()"/>
+            <p id="zodiac" style="text-align: justify"></p>
+        </div>
+    </section>
+    <section>
+        <h3>Test</h3>
+        <div class="container">
+            <p id="enter"></p>
+            <input class="button" type="submit" value="Generate" onclick="gen()"/>
+        </div>
+    </section>
+</div>
 <script>
-
+    function gen(){
+        var para = document.createElement("p");
+        var node = document.createTextNode("Hello World");
+        para.appendChild(node);
+        var enter = document.getElementById("enter");
+        enter.appendChild(para);
+    }
+    greet();
+    function greet() {
+        var greetings;
+        var h = new Date().getHours();
+        if (h < 10) {
+            greetings = "Good Morning";
+        } else if (h < 18) {
+            greetings = "Good day";
+        } else {
+            greetings = "Good evening";
+        }
+        document.getElementById("greetings").innerHTML = greetings;
+    }
     function imgSlide() {
         var image = document.getElementById('slideImg');
-        if (image.src.match("pic1")) {
+        if (image.src.match("pic4")) {
             image.src = "img/pic2.jpg"
         } else if (image.src.match("pic2")) {
             image.src = "img/pic3.jpg"
         } else if (image.src.match("pic3")) {
-            image.src = "img/pic4.jpg"
-        } else if (image.src.match("pic4")) {
+            image.src = "img/pic1.jpg"
+        } else if (image.src.match("pic1")) {
             image.src = "img/pic5.jpg"
         } else if (image.src.match("pic5")) {
-            image.src = "img/pic1.jpg"
+            image.src = "img/pic4.jpg"
         }
     }
     function imgSlideBack() {
         var image = document.getElementById('slideImg');
-        if (image.src.match("pic1")) {
+        if (image.src.match("pic4")) {
             image.src = "img/pic5.jpg"
         } else if (image.src.match("pic2")) {
-            image.src = "img/pic1.jpg"
+            image.src = "img/pic4.jpg"
         } else if (image.src.match("pic3")) {
             image.src = "img/pic2.jpg"
-        } else if (image.src.match("pic4")) {
+        } else if (image.src.match("pic1")) {
             image.src = "img/pic3.jpg"
         } else if (image.src.match("pic5")) {
-            image.src = "img/pic4.jpg"
+            image.src = "img/pic1.jpg"
+        }
+    }
+    function hexadecimal(){
+        var temp = document.getElementById('number').value;
+        if(temp == null || temp == ""){
+            alert("Please Enter a number");
+            return;
+        }
+        var number = parseInt(temp);
+        var hex = number.toString(16);
+        document.getElementById('result').innerHTML = hex;
+    }
+    function binary(){
+        var temp = document.getElementById('number').value;
+        if(temp == null || temp == ""){
+            alert("Please Enter a number");
+            return;
+        }
+        var number = parseInt(temp);
+        var bin = number.toString(2);
+        document.getElementById('result').innerHTML = bin;
+    }
+    function octadecimal(){
+        var temp = document.getElementById('number').value;
+        if(temp == null || temp == ""){
+            alert("Please Enter a number");
+            return;
+        }
+        var number = parseInt(temp);
+        var octa = number.toString(8);
+        document.getElementById('result').innerHTML = octa;
+    }
+    function zodiac(){
+        var month = document.getElementById('month').value;
+        if(month<1 || month > 12){
+            alert("Please enter a valid month");
+            return;
+        }
+        var date = document.getElementById('date').value;
+        if(date<1 || date > 31){
+            alert("Please enter a valid date");
+            return;
+        }
+        var aries ="<h1>Aries</h1><p style='padding: 5px'>Aries people are creative, adaptive, and insightful. They can also be strong-willed and spontaneous (sometimes to a fault). Aries people can be driven and are very ambitious often making them over-achievers in anything they set their mind to tackle. Aries are fire signs, and so too is their personality. They may be quick to anger, but don't take it personally, it's just their fiery, passionate personalities showing through. Aries signs have excellent sense of humor, and they get along with almost everyone at the party (and they DO know how to party). Aries can be impatient, but we love them anyway because they are devoted friends, lovers and family members - they are loyal to then end and will fight for their causes (usually supporting the underdog).</p>";
+        var taurus = "<h1>Taurus</h1><p style='padding: 5px'>Taurus zodiac signs and meanings, like the animal that represents them, is all about strength, stamina and will. Stubborn by nature, the Taurus will stand his/her ground to the bitter end (sometimes even irrationally so). But that's okay because the Taurus is also a loving, sympathetic and appreciative sign. The Taurus is very understanding and when we need someone to unburden ourselves to, we often share our deepest fears with the Taurians of the zodiac. Taurians are very patient, practical and efficient, they are excellent in matters of business and are also wonderful instructors/teachers. Although initially they may have their own best interest at heart, they are ultimately & endlessly generous with their time, possessions and love.</p>";
+        var gemini = "<h1>Gemini</h1><p style='padding: 5px'>Flexibility, balance and adaptability are the keywords for the Gemini. They are quick to grasp the meaning of a situation and act on it, often with positive effects. They tend to have a duality to their nature, and can sometimes be tough to predict how they will react. They can turn from hot to cold and may be prone to noticeable mood swings. However, they are generous signs with tendencies of being affectionate, and imaginative. They also inspire others easily as they seem to naturally motivate themselves - their charisma and accomplishments are infectious. Geminians are very supportive, and are especially good at promotions, sales, and driving hard bargains.</p>"
+        var cancer = "<h1>Cancer</h1><p style='padding: 5px'>Cancerians love home-life, family and domestic settings. They are traditionalists, and enjoy operating on a fundamental level. They love history, and are fascinated with the beginnings of things (heraldry, ancestry, etc.). The moon is their ruler, so they can be a bit of a contradiction and sometimes moody. However, they are conservative, so they'll be apt to hide their moods from others altogether. They have a reputation for being fickle, but they'll tell you that isn't true, and it's not. Cancerians make loyal, sympathetic friends. However Cancerians need alone time, and when they retreat, let them do so on their terms.</p>";
+        var leo = "<h1> Leo </h1> <p style='padding: 5px'>The zodiac signs and meanings of Leo is about expanse, power and exuberance. Leo's are natural born leaders, and they will let you know it as they have a tendency to be high-minded and vocal about their opinions. That's okay, because if you observe, the Leo is usually correct in his/her statements. Leo's have a savvy way of analyzing a situation and executing swift judgment with a beneficial outcome. It comes from being a leader. They are brave, intuitive, and also head-strong and willful. Beneath their dynamic persona lies a generous, loving, sensitive nature that they do not easily share with others. They might be a bit bossy, but those who know them understand this comes from a source need to do good, not (usually) from an inflated ego.</p>";
+        var virgo = "<h1>Virgo</h1><p style='padding: 5px'>Virgo's have keen minds, and are delightful to chat with, often convincing others of outlandish tales with ease and charm. Virgo's are inquisitive and are very skilled at drawing information from people. This trait also makes them naturally intuitive. Combine this with their remarkable memories, and we see an advanced, analytical personality. However the Virgo needs balance in their lives otherwise they may become short-tempered, impatient and self-serving. Virgo's are excellent teammates in work and social activities. They work well with others, although they freely express their opinions (even when unwarranted).</p>";
+        var libra = "<h1>Libra</h1><p style='padding: 5px'>As their zodiac signs and meanings would indicate, Libra's are all about balance, justice, equanimity and stability. They easily surround themselves with harmony and beauty, but sometimes go to extremes to do so if their goals are unreasonable or unhealthy. With Venus as their ruling planet, Libra's are very understanding, caring, and often the champion of underdogs. They have keen intuitions, but often don't give themselves enough credit for their perceptions. They can be quiet and shy if not persuaded to come out of their shell. Ironically and in spite of their introverted nature they make excellent debaters, often proving a point from out of seemingly nowhere.</p>";
+        var scorpio = "<h1>Scorpio</h1><p style='padding: 5px'>The Scorpio is often misunderstood. These personalities are bold and are capable of executing massive enterprises with cool control and confidence. They can surmount seemingly all obstacles when they put their mind to the task, and they have unshakable focus when the situation calls for it. Regardless of their bold nature, they are often secretive, but they are always observing behind their withdrawn manner. Being associated with a solar animal, (the scorpion) they are not withdrawn for long, and when they come out again they do so with force, vigor and determination. It is true, Scorpio's can be argumentative and pack a powerful sting, but that's simply because they see all opposition as a healthy challenge.</p>";
+        var sagittarius = "<h1>Sagittarius</h1><p style='padding: 5px'>Here we have the philosopher among the zodiac signs and meanings. Like the Scorpio, they have great ability for focus, and can be very intense. However, they must channel their energy or they will waste time and wear themselves out going in too many directions at once. They are not very patient and expect quick results. However, when encountered with failure they make extreme comeback's often against incredible odds. They make loyal friends and lovers, but they do not handle commitment well as they refuse to be tied down while chasing philosophical pursuits.</p>";
+        var capricorn = "<h1>Capricorn</h1><p style='padding: 5px'>Capricorn's are also philosophical signs and are highly intelligent too. They apply their knowledge to practical matters, and strive to maintain stability and order. They are good organizers, and they achieve their goals by purposeful, systematic means. They are very intuitive, although they don't share this trait with others freely. They do not deal well with opposition or criticism but a healthy Capricorn will often shrug off negative comments towards their character. They are patient and persevering - they know they can accomplish any task as long as they follow a their plan step-by-step. Capricorn's have broad shoulders, and typically take on other's problems with aplomb. Ironically, they rarely share their own problems and tend to go through bouts of inner gloom after a spell of dwelling on these problems.</p>";
+        var aquarius = "<h1>Aquarius</h1><p style='padding: 5px'>Often simple and unassuming, the Aquarian goes about accomplishing goals in a quiet, often unorthodox ways. Although their methods may be unorthodox, the results for achievement are surprisingly effective. Aquarian's will take up any cause, and are humanitarians of the zodiac. They are honest, loyal and highly intelligent. They are also easy going and make natural friendships. If not kept in check, the Aquarian can be prone to sloth and laziness. However, they know this about themselves, and try their best to motivate themselves to action. They are also prone to philosophical thoughts, and are often quite artistic and poetic.</p>";
+        var pisces = "<h1>Pisces</h1> <p style='padding: 5px'>Also unassuming, the Pisces zodiac signs and meanings deal with acquiring vast amounts of knowledge, but you would never know it. They keep an extremely low profile compared to others in the zodiac. They are honest, unselfish, trustworthy and often have quiet dispositions. They can be overcautious and sometimes gullible. These qualities can cause the Pisces to be taken advantage of, which is unfortunate as this sign is beautifully gentle, and generous. In the end, however, the Pisces is often the victor of ill circumstance because of his/her intense determination. They become passionately devoted to a cause - particularly if they are championing for friends or family.</p>";
+        if(month == 03 ){
+            if (date > 0 && date < 21){
+                document.getElementById('zodiac').innerHTML = pisces;
+            }else if(date > 20 && date < 32){
+                document.getElementById('zodiac').innerHTML = aries;
+            }
+        }else if(month == 04){
+            if (date > 0 && date < 21){
+                document.getElementById('zodiac').innerHTML = aries;
+            }else if(date > 20 && date < 31){
+                document.getElementById('zodiac').innerHTML = taurus;
+            }
+        }else if(month == 05){
+            if (date > 0 && date < 22){
+                document.getElementById('zodiac').innerHTML = taurus;
+            }else if(date > 21 && date < 32){
+                document.getElementById('zodiac').innerHTML = gemini;
+            }
+        }else if(month == 06){
+            if (date > 0 && date < 21){
+                document.getElementById('zodiac').innerHTML = gemini;
+            }else if(date > 20 && date < 31){
+                document.getElementById('zodiac').innerHTML = cancer;
+            }
+        }else if(month == 07){
+            if (date > 0 && date < 24){
+                document.getElementById('zodiac').innerHTML = cancer;
+            }else if(date > 23 && date < 32){
+                document.getElementById('zodiac').innerHTML = leo;
+            }
+        }else if(month == 08){
+            if (date > 0 && date < 23){
+                document.getElementById('zodiac').innerHTML = leo;
+            }else if(date > 22 && date < 32){
+                document.getElementById('zodiac').innerHTML = virgo;
+            }
+        }else if(month == 09){
+            if (date > 0 && date < 23){
+                document.getElementById('zodiac').innerHTML = virgo;
+            }else if(date > 22 && date < 31){
+                document.getElementById('zodiac').innerHTML = libra;
+            }
+        }else if(month == 10){
+            if (date > 0 && date < 23){
+                document.getElementById('zodiac').innerHTML = libra;
+            }else if(date > 22 && date < 32){
+                document.getElementById('zodiac').innerHTML = scorpio;
+            }
+        }else if(month == 11){
+            if (date > 0 && date < 22){
+                document.getElementById('zodiac').innerHTML = scorpio;
+            }else if(date > 21 && date < 31){
+                document.getElementById('zodiac').innerHTML = sagittarius;
+            }
+        }else if(month == 12){
+            if (date > 0 && date < 22){
+                document.getElementById('zodiac').innerHTML = sagittarius;
+            }else if(date > 21 && date < 32){
+                document.getElementById('zodiac').innerHTML = capricorn;
+            }
+        }else if(month == 01){
+            if (date > 0 && date < 20){
+                document.getElementById('zodiac').innerHTML = capricorn;
+            }else if(date > 19 && date < 32){
+                document.getElementById('zodiac').innerHTML = aquarius;
+            }
+        }else if(month == 02){
+            if (date > 0 && date < 19){
+                document.getElementById('zodiac').innerHTML = capricorn;
+            }else if(date > 18 && date < 30){
+                document.getElementById('zodiac').innerHTML = pisces;
+            }
         }
     }
 </script>

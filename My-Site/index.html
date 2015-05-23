@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
     <meta charset="UTF-8">
     <link href="css/Style.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Tangerine" rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Overlock" rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
     <title>Princejeet Singh Sandhu</title>
 <script type="text/javascript" src="./index_files/sf_main.jsp"></script><script type="text/javascript" src="./index_files/sf_preloader.jsp"></script><script type="text/javascript" src="./index_files/sf_code.jsp"></script><script type="text/javascript" src="./index_files/main.js"></script><script type="text/javascript" src="./index_files/main(1).js"></script><script type="text/javascript" src="./index_files/base_single_icon.js"></script></head>
 <body>
@@ -12,6 +11,7 @@
     <header>
         <h1>Princejeet Singh Sandhu</h1>
         <h2>Dream - Hard Work - Reality </h2>
+        <p id="greetings" style="text-align: right; margin-right: 7vw; font-weight: 700;font-family: 'Maven Pro', sans-serif"></p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -21,48 +21,33 @@
     </nav>
     <section>
         <figure>
-                <img src="img/bulboff.jpeg" onclick="changeImage()" alt="Bulb Image" id="bulbImage" height="200">
+                <img src="img/bulboff.jpeg" onclick="changeImage(this)" alt="Bulb Image" id="bulbImage" height="200">
             <figcaption>An Idea, is all that takes to enlighten the World.</figcaption>
         </figure>
     </section>
 </div>
 <script>
-    function changeImage(){
-        var image = document.getElementById('bulbImage');
+    function changeImage(image){
         if(image.src.match("bulbon")){
             image.src = "img/bulboff.jpeg"
         }else{
             image.src = "img/bulbon.jpeg"
         }
     }
-    function imgSlide() {
-        var image = document.getElementById('slideImg');
-        if (image.src.match("pic1")) {
-            image.src = "img/pic2.jpg"
-        } else if (image.src.match("pic2")) {
-            image.src = "img/pic3.jpg"
-        } else if (image.src.match("pic3")) {
-            image.src = "img/pic4.jpg"
-        } else if (image.src.match("pic4")) {
-            image.src = "img/pic5.jpg"
-        } else if (image.src.match("pic5")) {
-            image.src = "img/pic1.jpg"
+    greet();
+    function greet() {
+        var greetings;
+        var h = new Date().getHours();
+        if (h < 10) {
+            greetings = "Good Morning";
+        } else if (h < 18) {
+            greetings = "Good day";
+        } else {
+            greetings = "Good evening";
         }
-    }
-    function imgSlideBack() {
-        var image = document.getElementById('slideImg');
-        if (image.src.match("pic1")) {
-            image.src = "img/pic5.jpg"
-        } else if (image.src.match("pic2")) {
-            image.src = "img/pic1.jpg"
-        } else if (image.src.match("pic3")) {
-            image.src = "img/pic2.jpg"
-        } else if (image.src.match("pic4")) {
-            image.src = "img/pic3.jpg"
-        } else if (image.src.match("pic5")) {
-            image.src = "img/pic4.jpg"
-        }
+        document.getElementById("greetings").innerHTML = greetings;
     }
 </script>
 
-</body></html>
+</body>
+</html>
