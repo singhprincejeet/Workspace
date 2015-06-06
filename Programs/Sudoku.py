@@ -25,7 +25,11 @@ incorrect4 = [['a','b','c'],
 
 incorrect5 = [ [1, 1.5],
                [1.5, 1]]
-               
+
+"""
+ This program takes in a sudoku puzzle as an input and returns whether the puzzle is correct or not.
+ @:param inputPuzzle IT is the puzzle on which test is to be performed.
+"""
 def check_sudoku(inputPuzzle):
     size = len(inputPuzzle)
     count = 1
