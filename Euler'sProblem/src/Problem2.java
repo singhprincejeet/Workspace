@@ -3,22 +3,16 @@
  */
 public class Problem2 {
     public static void main(String[] args) {
-        int a1=1,a2=2;
-        int sum = 0,a3=0;
-        if (a1%2==0){
-            sum+=a1;
-        }
-        if (a2%2==0){
-            sum+=a2;
-        }
-        for (int i = 0; i < 4000000 && a3<4000000; i++) {
-            a3= a1+a2;
-            a1=a2;
-            a2=a3;
-            if (a3%2==0) {
-                sum += a3;
-            }
-        }
-        System.out.println(sum);
+        inint first = 1;
+		int second = 2;
+		int next = 0;
+		int sum = second;
+		while (next<4000000 && (first+second)<4000000) {
+			next = first + second;
+			first = second;
+			second = next;
+			sum += next%2 == 0 ? next : 0;
+		}
+		System.out.println(sum);
     }
 }
