@@ -191,14 +191,12 @@ public class Jeopardy extends JFrame implements ActionListener {
   
   /**
    * Java programs start by executing the main method. Here, this main method
-   * creates the main window of the application and also displays the information of the students.
+   * creates the main window of the application.
    *
    * @param args
    *            the command line arguments
    */
   public static void main(String[] args) {
-    
-    StudentInfo.display();
     Jeopardy jeopardy = new Jeopardy();
     jeopardy.setVisible(true);
     jeopardy.setSize(new Dimension(500,300));
