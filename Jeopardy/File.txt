@@ -1,0 +1,57 @@
+5
+5
+Class
+Data Type
+Loops
+Conditions
+Miscellaneous
+They are defined so that other classes can extend them and make them concrete by implementing the abstract methods.
+What is abstract class ?
+A method that has no implementation.
+What is abstract method?
+A Java(TM) programming language keyword used to define a collection of method definitions and constant values.
+What is interface?
+In the Java(TM) programming language, a type that defines the implementation of a particular kind of object.
+What is class?
+A method that is invoked without reference to a particular object.
+What is class method?
+A collection of data items, all of the same type, in which each item's position is uniquely designated by an integer.
+What is array?
+Explicit conversion from one data type to another.
+What is casting?
+A Java(TM) programming language keyword. You define an entity once and cannot change it or derive from it later.
+What does final do?
+A Java(TM) programming language keyword used to specify an undefined value for reference variables
+What is null
+A Java(TM) programming language keyword used to create an instance of a class.
+What is new?
+A Java(TM) programming language keyword used to declare a loop that reiterates statements. The programmer can specify the statements to be executed, exit conditions, and initialization variables.
+What is for loop?
+A Java(TM) programming language keyword used to declare a loop that will iterate a block of statements. The loop`s exit condition can be specified with the "while" keyword.
+What is do while loop?
+A Java(TM) programming language keyword used to declare a loop that iterates a block of statements. The loop`s exit condition is specified as part of the while statement.
+What is while loop?
+A Java(TM) programming language keyword used to resume program execution at the end of the current loop.
+What is continue?
+A Java(TM) programming language keyword used to resume program execution at the statement immediately following the current statement. If followed by a label, the program resumes execution at the labeled statement.
+What is break?
+A Java(TM) programming language keyword used to conduct a conditional test and execute a block of statements if the test evaluates to true.
+What is if statement?
+A Java(TM) programming language keyword used to execute a block of statements in the case that the test condition with the "if" keyword evaluates to false.
+What is else statement?
+Refers to an expression or variable that can have only a true or false value.
+What is boolean?
+A Java(TM) programming language keyword used to evaluate a variable that can later be matched with a value specified by the "case" keyword in order to execute a group of statements.
+What is switch?
+A Java(TM) programming language keyword that defines a group of statements to begin executing if a value specified matches the value defined by a preceding "switch" keyword.
+What is case?
+In a program, explanatory text that is ignored by the compiler.
+What is comment?
+A pseudo-method that creates an object.
+What is constructor?
+A Java(TM) programming language keyword used to access members of a class inherited by the class in which it appears.
+What is super?
+Using one identifier to refer to multiple items in the same scope.
+What is overloading?
+Java ARchive. A file format used for aggregating many files into one.
+Wht is .jar file?
