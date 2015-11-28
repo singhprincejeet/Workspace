@@ -1,0 +1,27 @@
+0 0 0 color
+0 0 1000 400 rectangle
+255 255 255 color 
+750 60 70 circle
+114 176 228 color
+300 180 350 100 400 180 triangle
+198 71 37 color
+350  100 400 100 400 180 triangle
+400 100 150 80 rectangle
+550 180 550 100 600 180 triangle
+216 139 45 color
+300 180 100 150 rectangle
+232 184 48 color
+400 180 200 150 rectangle
+330 250 40 80 rectangle
+216 139 45 color
+460 230 40 20 rectangle
+198 71 37 color
+500 230 40 20 rectangle
+198 71 37 color
+460 250 40 20 rectangle
+216 139 45 color
+500 250 40 20 rectangle
+165 42 42 color
+330 330 290 400 330 400 triangle
+330 330 370 330 330 400 triangle
+800 390 "By Princejeet Singh " type
