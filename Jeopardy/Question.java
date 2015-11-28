@@ -47,13 +47,4 @@ public class Question {
     
   }
   
-  /**
-   * Java programs start by executing the main method. Here, this main method displays the information of the students.
-   *
-   * @param args
-   *            the command line arguments
-   */
-  public static void main(String[] args){
-    StudentInfo.display();
-  }
 }
