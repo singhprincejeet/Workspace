@@ -154,6 +154,6 @@ def lucky_search(index, ranks, keyword):
             result = check
     return result
 
-index, graph = crawl_web('http://www.eiti.uottawa.ca/~turcotte/teaching/iti-1121/lectures/index.html')#name of the website goes here
+index, graph = crawl_web('any weblink')#name of the website goes here
 ranks = compute_ranks(graph)
 print lucky_search(index, ranks, '')#put keyword to get the best result
