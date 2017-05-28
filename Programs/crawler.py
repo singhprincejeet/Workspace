@@ -70,7 +70,6 @@ def uniquify(lst):
     return keys.keys()
 
 
-crawl_web('http://health.uottawa.ca/nursing/', 'http://health.uottawa.ca/nursing/')
 for i in capture:
     for j in capture[i]:
         table.append([i, j])
